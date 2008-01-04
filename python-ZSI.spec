@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Jan 04 2008 Michał Bentkowski <mr.ecik at gmail.com> - 2.0-3
+- Just bumping...
+
 * Sat Dec 29 2007 Michał Bentkowski <mr.ecik at gmail.com> - 2.0-2
 - Fix License field (BSD to LBNL BSD)
 
