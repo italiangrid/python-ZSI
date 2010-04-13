@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.0
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
@@ -12,10 +12,10 @@ Source0:        http://belnet.dl.sourceforge.net/sourceforge/pywebsvcs/ZSI-%{ver
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
-Requires:       PyXML
+Requires:       PyXML python-setuptools
 
 %description
-The Zolara SOAP Infrastructure provides libraries for developing web services
+The Zolera SOAP Infrastructure provides libraries for developing web services
 using the python programming language. The libraries implement the various
 protocols used when writing web services including SOAP, WSDL, and other
 related protocols.
@@ -64,6 +64,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Apr 13 2010 James Bowes <jbowes@redhat.com> 2.0-7
+- Fix typo in description
+
 * Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.0-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
 
