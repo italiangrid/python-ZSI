@@ -19,7 +19,7 @@ Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
 License:        MIT and LBNL BSD and ZPLv2.0
 URL:            http://pywebsvcs.sourceforge.net/
-Source0:        http://belnet.dl.sourceforge.net/sourceforge/pywebsvcs/ZSI-%{version}.tar.gz
+Source0:        http://downloads.sourceforge.net/pywebsvcs/ZSI/ZSI-%{version}/ZSI-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
@@ -136,6 +136,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Feb 7 2011 Steve Traylen <steve.traylen@cern.ch> - 2.0-7
 - Add python26 package.
+- Correct Source URL.
 
 * Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.0-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
