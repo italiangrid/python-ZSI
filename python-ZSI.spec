@@ -1,14 +1,14 @@
 %{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
 
 Name:           python-ZSI
-Version:        2.0
-Release:        13%{?dist}
+Version:        2.1
+Release:        1%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
 License:        MIT and LBNL BSD and ZPLv2.0
 URL:            http://pywebsvcs.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/pywebsvcs/ZSI/ZSI-%{version}/ZSI-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/project/pywebsvcs/ZSI/ZSI-%{version}_a1/ZSI-%{version}-a1.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools PyXML
@@ -21,7 +21,7 @@ protocols used when writing web services including SOAP, WSDL, and other
 related protocols.
 
 %prep
-%setup -q -n ZSI-%{version}
+%setup -q -n ZSI-%{version}-a1
 
 # remove cvs internal files and
 # get rid of executable perm due to rpmlint's
@@ -63,13 +63,13 @@ test_t9
 test_union
 test_list
 test_URI
-test_rfc2617"
+test_rfc2617
+test_TCtimes"
 for i in $good_testlist; do
     %{__python} test/${i}.py 
 done
 
-bad_testlist="test_TCtimes
-test_t8"
+bad_testlist="test_t8"
 # These tests fails for now, fix upstream?
 for i in $bad_testlist; do
     %{__python} test/${i}.py || :
@@ -83,13 +83,15 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 # we need png's for html's to be more readable
 %doc CHANGES README samples doc/examples doc/*.html doc/*.png doc/*.css
-%{_bindir}/wsdl2dispatch
 %{_bindir}/wsdl2py
 %{python_sitelib}/ZSI
 %{python_sitelib}/ZSI-*.egg-info
 
 
 %changelog
+* Sat Aug 11 2012 Tim Fenn <tim.fenn@gmail.com> - 2.1-1
+- update to 2.1-a1
+
 * Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.0-13
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
