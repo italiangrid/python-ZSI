@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
@@ -11,8 +11,8 @@ URL:            http://pywebsvcs.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/pywebsvcs/ZSI/ZSI-%{version}_a1/ZSI-%{version}-a1.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-BuildRequires:  python-devel python-setuptools PyXML
-Requires:       PyXML python-setuptools
+BuildRequires:  python-devel python-setuptools
+Requires:       python-setuptools
 
 %description
 The Zolera SOAP Infrastructure provides libraries for developing web services
@@ -89,6 +89,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Aug 18 2012 Tim Fenn <tim.fenn@gmail.com> - 2.1-3
+- remove PyXML dep
+
 * Sat Aug 11 2012 Tim Fenn <tim.fenn@gmail.com> - 2.1-2
 - fix good/bad testlist
 
