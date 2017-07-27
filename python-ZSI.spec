@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.1
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
@@ -89,6 +89,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Jul 27 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.1-11
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.1-10
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
