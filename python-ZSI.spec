@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.1
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
@@ -12,13 +12,21 @@ Source0:	http://downloads.sourceforge.net/project/pywebsvcs/ZSI/ZSI-%{version}_a
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
-Requires:       python-setuptools
 
-%description
-The Zolera SOAP Infrastructure provides libraries for developing web services
-using the python programming language. The libraries implement the various
-protocols used when writing web services including SOAP, WSDL, and other
+%global _description\
+The Zolera SOAP Infrastructure provides libraries for developing web services\
+using the python programming language. The libraries implement the various\
+protocols used when writing web services including SOAP, WSDL, and other\
 related protocols.
+
+%description %_description
+
+%package -n python2-zsi
+Summary: %summary
+Requires:       python-setuptools
+%{?python_provide:%python_provide python2-zsi}
+
+%description -n python2-zsi %_description
 
 %prep
 %setup -q -n ZSI-%{version}-a1
@@ -79,7 +87,7 @@ done
 rm -rf %{buildroot}
 
 
-%files
+%files -n python2-zsi
 %defattr(-,root,root,-)
 # we need png's for html's to be more readable
 %doc CHANGES README samples doc/examples doc/*.html doc/*.png doc/*.css
@@ -89,6 +97,10 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Aug 19 2017 Zbigniew Jędrzejewski-Szmek <zbyszek@in.waw.pl> - 2.1-12
+- Python 2 binary package renamed to python2-zsi
+  See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3
+
 * Thu Jul 27 2017 Fedora Release Engineering <releng@fedoraproject.org> - 2.1-11
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 
