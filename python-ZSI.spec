@@ -9,7 +9,6 @@ Group:          Development/Languages
 License:        MIT and LBNL BSD and ZPLv2.0
 URL:            http://pywebsvcs.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/pywebsvcs/ZSI/ZSI-%{version}_a1/ZSI-%{version}-a1.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools
 
