@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.1
-Release:        13%{?dist}
+Release:        14%{?dist}
 Summary:        Zolera SOAP Infrastructure
 Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
@@ -10,7 +10,7 @@ License:        MIT and LBNL BSD and ZPLv2.0
 URL:            http://pywebsvcs.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/project/pywebsvcs/ZSI/ZSI-%{version}_a1/ZSI-%{version}-a1.tar.gz
 BuildArch:      noarch
-BuildRequires:  python-devel python-setuptools
+BuildRequires:  python2-devel python2-setuptools
 
 %global _description\
 The Zolera SOAP Infrastructure provides libraries for developing web services\
@@ -22,7 +22,7 @@ related protocols.
 
 %package -n python2-zsi
 Summary: %summary
-Requires:       python-setuptools
+Requires:       python2-setuptools
 %{?python_provide:%python_provide python2-zsi}
 
 %description -n python2-zsi %_description
@@ -93,6 +93,10 @@ done
 
 
 %changelog
+* Wed Feb 14 2018 Iryna Shcherbina <ishcherb@redhat.com> - 2.1-14
+- Update Python 2 dependency declarations to new packaging standards
+  (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
+
 * Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.1-13
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
