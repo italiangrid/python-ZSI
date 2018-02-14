@@ -82,9 +82,6 @@ for i in $bad_testlist; do
     %{__python} test/${i}.py || :
 done
  
-%clean
-rm -rf %{buildroot}
-
 
 %files -n python2-zsi
 %defattr(-,root,root,-)
