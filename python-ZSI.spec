@@ -84,7 +84,6 @@ done
  
 
 %files -n python2-zsi
-%defattr(-,root,root,-)
 # we need png's for html's to be more readable
 %doc CHANGES README samples doc/examples doc/*.html doc/*.png doc/*.css
 %{_bindir}/wsdl2py
