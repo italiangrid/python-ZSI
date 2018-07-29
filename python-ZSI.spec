@@ -45,7 +45,7 @@ find doc/examples samples -perm 755 -type f -exec chmod a-x {} \;
 
 %install
 rm -rf %{buildroot}
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%py2_install
 
 # some files have shebang and aren't executable
 # the simple command below looks for them and if
