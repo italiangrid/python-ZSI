@@ -87,8 +87,8 @@ done
 # we need png's for html's to be more readable
 %doc CHANGES README samples doc/examples doc/*.html doc/*.png doc/*.css
 %{_bindir}/wsdl2py
-%{python_sitelib}/ZSI
-%{python_sitelib}/ZSI-*.egg-info
+%{python2_sitelib}/ZSI
+%{python2_sitelib}/ZSI-*.egg-info
 
 
 %changelog
