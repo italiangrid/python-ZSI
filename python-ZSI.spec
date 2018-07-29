@@ -40,7 +40,7 @@ find doc/examples -name .cvs\* -exec rm -f {} \;
 find doc/examples samples -perm 755 -type f -exec chmod a-x {} \;
 
 %build
-%{__python} setup.py build
+%py2_build
 
 
 %install
