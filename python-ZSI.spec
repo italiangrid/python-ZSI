@@ -4,7 +4,6 @@ Name:           python-ZSI
 Version:        2.1
 Release:        15%{?dist}
 Summary:        Zolera SOAP Infrastructure
-Group:          Development/Languages
 # to obtain some license information have a look at ZSI/__init__.py file
 License:        MIT and LBNL BSD and ZPLv2.0
 URL:            http://pywebsvcs.sourceforge.net/
