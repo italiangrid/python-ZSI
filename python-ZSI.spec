@@ -2,7 +2,7 @@
 
 Name:           python-ZSI
 Version:        2.1
-Release:        15%{?dist}
+Release:        16%{?dist}
 Summary:        Zolera SOAP Infrastructure
 # to obtain some license information have a look at ZSI/__init__.py file
 License:        MIT and LBNL BSD and ZPLv2.0
@@ -91,6 +91,9 @@ done
 
 
 %changelog
+* Sat Feb 02 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.1-16
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 2.1-15
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
